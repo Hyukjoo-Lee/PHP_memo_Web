@@ -8,14 +8,14 @@ $login_name = isset($_POST['login_name']) ? $_POST['login_name'] : null;
 
 // Check params
 if ($login_id == null || $login_pw == null || $login_name == null) {
-    header("Location: /regist.php");
+    header("Location: ./regist.php");
     exit();
 }
 
 // Check whether id is existing or not
 $member_count = db_select("select count(member_id) cnt from tbl_member where login_id = ?", array($login_id));
 if ($member_count && $member_count[0]['cnt'] == 1) {
-    header("Location: /regist.php");
+    header("Location: ./regist.php");
     exit();
 }
 
@@ -33,4 +33,4 @@ db_insert(
 );
 
 // Move to login page
-header("Location: /login.php");
+header("Location: ./login.php");

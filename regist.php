@@ -8,7 +8,7 @@
 <body>
     <?php require_once("inc/header.php"); ?>
     <h1>Registration</h1>
-    <form method="POST" action="regist.post.php">
+    <form method="POST" action="./regist.post.php">
         <p>
             ID :
             <input type="text" name="login_id" />
@@ -26,3 +26,6 @@
 </body>
 
 </html>
+<!-- testId
+1234 
+hyukjoo-->

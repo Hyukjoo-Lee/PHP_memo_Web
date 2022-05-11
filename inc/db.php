@@ -3,21 +3,22 @@ function db_get_pdo()
 {
     $host = 'localhost';
     $port = '3306';
-    $dbname = 'phtw';
+    $dbname = 'phpmemo';
     $charset = 'utf8';
-    $username = 'phtw';
-    $db_pw = "1234";
+    $username = 'root';
+    $db_pw = "";
     $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=$charset";
     $pdo = new PDO($dsn, $username, $db_pw);
     return $pdo;
 }
 
-function db_select($query, $param=array()){
+function db_select($query, $param = array())
+{
     $pdo = db_get_pdo();
     try {
         $st = $pdo->prepare($query);
         $st->execute($param);
-        $result =$st->fetchAll(PDO::FETCH_ASSOC);
+        $result = $st->fetchAll(PDO::FETCH_ASSOC);
         $pdo = null;
         return $result;
     } catch (PDOException $ex) {
