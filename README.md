@@ -14,7 +14,7 @@ ___
 ### Development Environments
 
 - <em>PHP</em>
-- Visual Studio Code & MySQL & WAMP Local Serve
+- Visual Studio Code & MySQL & WAMP Local Server
 ___
 
 ### Output
